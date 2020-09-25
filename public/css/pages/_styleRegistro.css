@@ -1,0 +1,145 @@
+@import url('https://use.fontawesome.com/releases/v5.14.0/css/all.css');
+
+/* =====================
+- BODY FROMULARIO
+===================== */
+
+h5 {
+    color: var(--violeta-textos);;
+}
+
+div.titulo {
+    background-color: var(--rosa-background-header);
+    border-radius: 5px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body div form div.registro {
+    margin-top: 10px;
+}
+
+div.titulo h2.tituloRegistro {
+    color: var(--violeta-textos);
+}
+
+body div form div div div.botonMinYMay {
+    margin: auto;
+}
+
+body div form div div div.botonCargarImg {
+    margin: 20px;
+}
+
+div.registro #register {
+    margin-top: 10px;
+}
+
+div.registro #register h5 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    background-color: white;
+    display: block;
+    width: 100%;
+    left: 14px;
+    top: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--violeta-textos);;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.form-group label.error {
+    color: var(--rosa-background-header);
+    border: 1px solid var(--rosa-background-header);
+}
+
+.form-group label.success {
+    color: var(--celeste-background);
+    border: 1px solid var(--celeste-background);
+}
+
+.form-group input {
+    border: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.form-group input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-group span#eye {
+    position: absolute;
+    height: 20px;
+    right: 14px;
+    top: calc(50% - 10px);
+    background: none;
+    border: none;
+}
+
+.form-group span#eye:before {
+    content: '\f06e';
+    color: #888;
+    font-size: 16px;
+    font-family: 'Font Awesome 5 Free'
+}
+
+.form-group span#eye.hide:before {
+    content: '\f070';
+    font-family: 'Font Awesome 5 Free'
+}
+
+.form-group span#eyeRePass {
+    position: absolute;
+    height: 20px;
+    right: 14px;
+    top: calc(50% - 10px);
+    background: none;
+    border: none;
+}
+
+.form-group span#eyeRePass:before {
+    content: '\f06e';
+    color: #888;
+    font-size: 16px;
+    font-family: 'Font Awesome 5 Free'
+}
+
+.form-group span#eyeRePass.hide:before {
+    content: '\f070';
+    font-family: 'Font Awesome 5 Free'
+}
+
+div.datos {
+    margin-top: 10px;
+    border-top: solid black 1px;
+}
+
+
+div form h5 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+section.imagen_usuario {
+    margin-top: 10px;
+    border-top: solid var(--violeta-textos) 1px;
+}
+
+section.imagen_usuario h5 {
+    margin-top: 10px;
+    font-weight: bold;
+}

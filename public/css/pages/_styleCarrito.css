@@ -1,0 +1,66 @@
+/* *{}
+
+body{} */
+
+body section.carrito{
+    margin: 15px auto;
+}
+h1.tituloCarrito{
+    background-color: rgb(235, 230, 230);
+    height: auto;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+/* body section.carrito div{} */
+
+
+
+/*=======================
+   ITEMS CARRITO
+=======================*/
+body section.carrito div article.items{
+    justify-content: center;
+    align-items: center;
+}
+
+body section.carrito div article.items img.fotoItemCarrito{
+    max-width: 100%;
+    padding: 8px;
+}
+body section.carrito div article.items div h5{
+    text-align: left;
+}
+body section.carrito div article.items div p{
+    text-align: center;
+}
+/* body section.carrito div article.items div p.cantidad{}
+body section.carrito div article.items div p.precio{} */
+
+body section.carrito div article.items div a.trash{
+    text-align: center;
+} 
+
+/* body section.carrito div article.items div a.trash{}
+body section.carrito div article.items div a.trash i.fa-trash-alt{} */
+
+div.envio{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.envio form.envio{
+    width: 80%;
+}
+
+div.carritoTotal{
+    padding: 25px 0;
+    text-align: center;
+}
+
+button.confirmBuy{
+    margin: 5px;
+}

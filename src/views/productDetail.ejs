@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  
+  <!-- Include Head -->
+  <%- include('partials/_contentHead') %>
+  <!--/ Include Head-->
+  
+  <title>CandyShop - Detalle Producto</title>
+  
+</head>
+
+<body>
+  
+  <!--Include Header-->
+  <%- include('partials/header') %>
+  
+  <section class="containerPrimary container cajaProductDetail">
+    <div class="rowPrimary row">
+      
+      <article class="tituloContainer container col-12">
+        <div class="tituloRow row">
+          <h2 class="tituloDetalleProducto"><%= elProducto.name %></h2>
+        </div> <!-- ./tituloRow-->
+      </article> <!-- ./tituloContainer-->
+      
+      <article class=" contenedorFotoDetalleProducto col-12 col-md-4 ">
+        <img class="fotoDetalleProducto col-12" src="/images/uploads/productDetail/<%= elProducto.image %>" alt="Foto del producto: <%= elProducto.name %>">   
+      </article> <!-- ./contenedorFotoDetalleProducto-->
+      
+      <article class="productoDetalladoContainer col-12 col-md-8 container ">
+        <div class="productoDetalladoRow row">
+          
+          <div class="precioContainer container col-12">
+            <div class="precioRow row">
+              <% let product = elProducto;
+              let getDiscountPercentage = discount => (100 - discount) / 100;
+              let finalPrice = (product.price * getDiscountPercentage(product.offer_discount)).toFixed(0); 
+              %>
+              <h4 class="precioh4">Precio unitario: <small class="smallPrecioh4"><%= milesGenerator(finalPrice) %></small></h4>
+            </div> <!-- ./precioRow-->
+          </div> <!-- ./precioContainer-->
+          
+          <div class="cantidadContainer container col-12">
+            <div class="cantidadRow row">
+              <label for="cantidad" class="cantidadLabel col-12 col-md-3">
+                <h5>Cantidad: </h5>
+              </label>
+              <select name="select" class="cantidadSelect col-12 col-md-3 custom-select" id="cantidad" <%= activeStatDisable %>>
+                <%let stockAMostrar = 0%>
+                <%for (let i=0; i<elProducto.stock; i++) { %>
+                  <%stockAMostrar = stockAMostrar+1%>
+                  <option value="<%=stockAMostrar%>"><%=stockAMostrar%></option>
+                  <% } %>
+                </select>
+                
+                
+              </div> <!-- ./cantidadRow-->
+            </div> <!-- ./cantidadContainer-->
+            
+            <div class="totalContainer container col-12">
+              <div class="totalRow row">
+                <h5 class="totalh5">Total:  <small class="smalltotalh5"><%= milesGenerator(finalPrice) %></small></h5>
+              </div> <!-- ./totalRow-->
+            </div> <!-- ./totalContainer-->
+            
+            <div class="containerButtonDetail col-12 container">
+              <a href="/sales/purchase"> 
+                <button type="button" class="btn <%= activeStatClass %> botonAñadirCarrito" <%= activeStatDisable %>><%= activeStat %></button>
+              </a>
+            </div> <!-- ./containerButton-->
+            
+          </div> <!-- ./productoDetalladoRow-->
+      </article> <!-- ./productoDetalladoContainer-->
+        
+      <article class="descripcionDetalladaDetail col-12">
+          <div class="descripcionDetalladaRow row">
+            <b class="col-3">Descripción detallada: </b>
+            <p class="col-9"><%= elProducto.detail %></p>
+          </div>
+      </article> <!-- ./descripcionDetallada -->
+        
+    </div> <!-- ./rowPrimary -->
+  </section> <!-- ./containerPrimary -->
+    
+    <!--Include Footer -->
+    <%- include('partials/footer') %>
+    
+    <!-- Include EndBodyScripts -->
+    <%- include('partials/_endBodyScripts') %>
+    
+  </body>
+  </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Include Head -->
+  <%- include('partials/_contentHead') %>
+  
+  
+  <title>CandyShop - Modificar productos</title>
+</head>
+<body>
+  <!--include HEADER-->
+  <%- include('partials/header') %>
+  
+  <div class="products-wrapper container">
+    <div class="row">
+      
+      <div class="col-12">
+        <h1 class="titularProductsBest">Todos tus productos para modificar</h1>
+      </div>
+      
+      <!-- MUESTRA DE LOS PRODUCTOS -->
+      <section class="productosDestacados container">
+        <div class="row">
+          <% for (product of losProductos) { 
+            let getDiscountPercentage = discount => (100 - discount) / 100;
+            let finalPrice = (product.price * getDiscountPercentage(product.offer_discount)).toFixed(0); 
+            %>
+            <article class="elContenedor col-6 col-sm-4 col-lg-2 container">
+              <div class="elProductoModify row">
+                
+                <div class="imagenProducto col-12">
+                  <img src="/images/uploads/productDetail/<%= product.image %>" alt="imagen de producto <%= product.name %>">
+                </div>  <!-- ./imagenProducto -->
+                
+                <div class="infoProductModify col-12">
+                  <h6><%= product.name %></h6>
+                </div>  <!-- ./infoProducto -->
+                
+                <div class="losLinks col-12 container-fluid">
+                  <div class="losLinksRow row">
+                    <a class="elLink col-12 col-sm-6" href="/products/edit/<%= `${product.id}` %>">
+                      <button type="submit" class="btn btn-warning">Modificar</button>
+                    </a>  
+                    
+                    <a class="elLink col-12 col-sm-6" href="/products/<%= `${product.id}` %>">
+                      <button type="submit" class="btn btn-info">Ver</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <% } %>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+    
+    <!--Include footer -->
+    <%- include('partials/footer') %>
+    
+    <!-- Include End Body Scripts -->
+    <%- include('partials/_endBodyScripts') %>
+  </body>
+  </html>

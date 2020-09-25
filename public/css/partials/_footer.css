@@ -1,0 +1,103 @@
+/* =====================
+- FOOTER
+===================== */
+  
+  footer{
+    overflow: hidden;
+    background-color: var(--celeste-background);
+    padding-top: 20px;
+    color: var(--violeta-textos);
+  }
+
+  footer div section div div div.imgLogoFooter{
+    text-align: center;
+  }
+
+  footer div section div div a img{
+    width: 300px;
+    text-align: center;
+  }
+  
+  footer div section div div div ul{
+    padding: 0;
+  }
+  
+  footer div section div div div ul li{
+    list-style-type: none;
+    margin: 10px;
+  }
+  
+  /* footer div section div div div ul li:before {
+    content: "\f786";
+    font-family: 'Font Awesome\ 5 free';
+  } *//*No anda a resolver*/
+  
+  footer div section div div div ul li a{
+    text-decoration: none;
+    color: var(--violeta-textos);
+  }
+  
+  footer div section div div div ul li a:hover{
+    text-decoration: none;
+    color: var(--gris-oscuro);
+  }
+  
+  footer div section div.footer2{
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  footer div section div.footer2 div.redesFooter{
+    justify-content: center;
+  }
+  
+  footer div section div.footer2 div a{
+    color: var(--violeta-textos);
+  }
+  
+  footer div section div.footer2 form{
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  footer div section div.footer2 form input.form-control {
+    width: 100%;
+    color: var(--violeta-textos);
+    margin: 10px; 
+  }
+
+  footer div section div.footer2 form button {
+    width: 100%;
+    color: black;
+    margin: 10px;
+  }
+
+  footer div section div.footer3{
+    margin-bottom: auto;
+    text-align: center;
+  }
+
+
+  
+  section#copyright p{
+    margin: 0;
+    background-color: var(--celeste-background);
+    text-align: center;
+    font-weight: 700;
+    color: var(--celeste-claro);
+  }
+
+  #whatsapp {
+    background-color: var(--celeste-background);
+  }
+
+  @media (max-width: 768px){
+    footer div section div.footer2 form {
+      padding-top: 0px;
+      text-align: center;
+    }
+
+
+  }
+ 

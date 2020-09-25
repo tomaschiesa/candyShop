@@ -1,0 +1,111 @@
+/* =====================
+- VARIABLES
+===================== */
+
+@import 'partials/_variables.css';
+
+/* =====================
+- PARTIALS
+===================== */
+
+@import 'partials/_header.css';
+@import 'partials/_navBar2.css';
+@import 'partials/_footer.css';
+@import 'partials/_whatsapp.css';
+
+/* =====================
+- PAGES
+===================== */
+
+@import 'pages/_styleProductCreateForm.css';
+@import 'pages/_styleProductEditForm.css';
+@import 'pages/_styleRegistro.css';
+@import 'pages/_styleHome.css';
+@import 'pages/_styleDetalle.css';
+@import 'pages/_styleCarrito.css';
+@import 'pages/_styleProducts.css';
+@import 'pages/_styleLogin.css';
+@import 'pages/_styleUsers.css';
+@import 'pages/_styleAllProductsModify.css';
+@import 'pages/_styleListUsers.css';
+@import 'pages/_styleError.css';
+@import 'pages/_styleManagementAdmin.css';
+@import 'pages/_styleProductsFind.css';
+
+/* =====================
+- IMPORTS
+===================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+/* @import url("https://kit.fontawesome.com/36f5743703.js"); comentada porque da error*/
+
+/* =====================
+- GENERAL
+===================== */
+*{
+  font: 14px "Poppins", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  /* background-color: tomato; */
+}
+
+/* =====================
+- BODY
+===================== */
+
+
+
+
+
+
+
+
+
+
+
+/* =====================
+- BANNER CADROUSEL
+imagenes a 960 x 205 en formato jpg
+===================== */
+section.banner{
+  padding: 0;
+  margin-top: -30px;
+}
+section.banner div.carousel-inner{
+  width: 100%;
+}
+
+
+
+/* =====================
+- PRODUCTOS DESTACADOS
+===================== */
+h1.titularProductsBest{
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+section.productosDestacados {
+  padding: 0;
+}/*En el article falta ajustar en cada uno*/
+
+section.productosDestacadostit {
+  margin-top: 15px;
+}
+
+section.productosDestacados div.productosDestacadostit {
+  margin-top: 15px;
+}
+
+section.productosDestacados div article img{
+  width: 100%;
+}
+
+section.productosDestacados div article div{
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+section.productosDestacados div article div h6{
+  font-weight: 700;
+}

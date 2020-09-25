@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Include Head -->
+  <%- include('partials/_contentHead') %>
+  
+  <title>CandyShop - Login Usuario</title>
+</head>
+<body>
+  <!--include HEADER-->
+  <%- include('partials/header') %>
+  
+  <div class="container cajaLoginOk cajaInicioUsers">
+
+    <div class="avatarRow row">
+      <div class="divAvatarUser col-12">
+        <img class="avatarUser" src="/images/uploads/users/<%= elUsuario.image %>" alt="Foto del usuario: <%= elUsuario.email %>">
+      </div>
+    </div>
+    <h1 class="tituloInicioSesion"> ¡Te logueaste <%= elUsuario.email %> !</h1>
+    <h2 class="subTituloInicioSesion">¡Welcome te logueaste! (function (In spanglish {Is very dificult}))</h2>
+    <p class="elParrafoInicioSesion"> Mira tu carrito o podes ir viendo nuestros productos!</p>
+
+    <!-- <a href="/users/detail/<%= //elUsuario.id %>"><button>Mis Datos en JSON</button></a> -->
+    
+    <div class="rowButtons row">
+      <a href="/users/registerEdit/<%= elUsuario.id %>" class="aButton col-4">
+        <button type="button" class="btn btn-warning botonAñadirCarrito">Modificar mis datos</button>
+      </a>
+      <a href="/products" class="aButton col-4">
+        <button type="button" class="btn btn-primary botonAñadirCarrito">Todos los productos</button>
+      </a>
+      <a href="/sales/purchase" class="aButton col-4">
+        <button type="button" class="btn btn-primary botonAñadirCarrito">Ver carrito</button>
+      </a>
+    </div>
+
+  </div>
+  
+  <!--Include footer -->
+  <%- include('partials/footer') %>
+  
+  <!-- Include End Body Scripts -->
+  <%- include('partials/_endBodyScripts') %>
+</body>
+</html>
