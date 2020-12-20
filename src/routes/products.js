@@ -4,6 +4,7 @@ const path = require('path');
 const productsController = require('../controllers/productsController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const visitCountMiddleware = require('../middlewares/visitCountMiddleware');
 const multer = require('multer');
 
 /* -------------------
@@ -45,7 +46,7 @@ router.put('/edit/:id', upload.any(), productsController.updateProduct);
 
 router.delete('/delete/:id', productsController.destroy);
 
-router.get('/:id', productsController.detailProduct);
+router.get('/:id', visitCountMiddleware.addVisit ,productsController.detailProduct);
 
 
 /* -------------------

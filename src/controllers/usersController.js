@@ -72,88 +72,11 @@ let usersController = {
   save: function(req, res, next) {
     let errors = validationResult(req);
     db.FiscalC.findAll()
-  .then(function(fiscalCond){
-    if(errors.isEmpty()) {
-      db.Usuario.create({
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        name_fantasy: req.body.name_fantasy,
-        province: req.body.province,
-        municipality: req.body.municipality,
-        location: req.body.location,
-        postal_code: req.body.postal_code,
-        adress: req.body.adress,
-        telephone: req.body.telephone,
-        business_name: req.body.business_name,
-        cuit: req.body.cuit,
-        fiscal_condition_id: req.body.fiscal_condition_id,
-        image: (req.files[0] == undefined) ? 'no-image.jpg' : req.files[0].filename,
-        admin: 0,
-        active: 1
-      })
-      .then(function(resultado) {
-        res.locals.mailRegistrado = resultado.email;
-        // return res.send (typeof mailRegistrado)
-        res.redirect('login');
-      });
-    } else {
-      res.render('register', {fiscalCond:fiscalCond,
-        errors: errors.mapped(),
-        old: req.body
-      });
-    }
-    })
-  },
-  login: function(req, res, next) {
-    res.render('login');
-  },
-  verify: function(req, res, next) {
-    let errors = validationResult(req);
-      db.Usuario.findAll()
-      .then(function(usuarios) {
-        if(errors.isEmpty()) {
-          for(let i = 0; i < usuarios.length; i++) {
-            if(usuarios[i].email == req.body.email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-              req.session.emailUsuario = usuarios[i].email;
-              if(req.body.remember != undefined) {
-                res.cookie('authRemember', usuarios[i].email, {maxAge: 60000 * 60 * 24 * 7}) //Vigente 1 semana!
-              }
-              res.redirect('/users')
-            }
-          }
-          return res.render('login', { 
-            errors: {
-              email: {
-                msg: 'Credenciales inválidas. Inserta un email registrado y su respectiva contraseña'
-              }
-            }
-          })
-        } else {
-          res.render('login', {
-            errors: errors.mapped(),
-            old: req.body
-          })
-        }
-      }
-    )},
-      logout: function(req, res, next) {
-        req.session.destroy();
-        res.cookie('authRemember', ''.email, {maxAge: -1});
-        res.redirect('/');
-      },      
-      regEdit: function(req, res, next) {
-        db.Usuario.findByPk(req.params.id)
-        .then(function(elUsuario) {
-          db.FiscalC.findAll()
-          .then(function(fiscalCond){
-            res.render('registerEdit', {elUsuario:elUsuario, fiscalCond:fiscalCond});
-          })
-        })
-      },
-      regUpdt: function(req, res) {
-        db.Usuario.update({
+    .then(function(fiscalCond){
+      if(errors.isEmpty()) {
+        db.Usuario.create({
           email: req.body.email,
-          password: (!req.body.password) ? this.password : bcrypt.hashSync(req.body.password, 10),
+          password: bcrypt.hashSync(req.body.password, 10),
           name_fantasy: req.body.name_fantasy,
           province: req.body.province,
           municipality: req.body.municipality,
@@ -164,22 +87,94 @@ let usersController = {
           business_name: req.body.business_name,
           cuit: req.body.cuit,
           fiscal_condition_id: req.body.fiscal_condition_id,
-          image: (!req.files[0]) ? this.image : req.files[0].filename,
-          active: 1         
-        },
-        {
-          where: {
-            id: req.params.id
+          image: (req.files[0] == undefined) ? 'no-image.jpg' : req.files[0].filename,
+          admin: 0,
+          active: 1
+        })
+        .then(function(resultado) {
+          res.locals.mailRegistrado = resultado.email;
+          // return res.send (typeof mailRegistrado)
+          res.redirect('login');
+        });
+      } else {
+        res.render('register', {fiscalCond:fiscalCond,
+          errors: errors.mapped(),
+          old: req.body
+        });
+      }
+    })
+  },
+  login: function(req, res, next) {
+    res.render('login');
+  },
+  verify: function(req, res, next) {
+    let errors = validationResult(req);
+    db.Usuario.findAll()
+    .then(function(usuarios) {
+      if(errors.isEmpty()) {
+        for(let i = 0; i < usuarios.length; i++) {
+          if(usuarios[i].email == req.body.email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
+            req.session.emailUsuario = usuarios[i].email;
+            if(req.body.remember != undefined) {
+              res.cookie('authRemember', usuarios[i].email, {maxAge: 60000 * 60 * 24 * 7}) //Vigente 1 semana!
+            }
+            res.redirect('/users')
+          }
+        }
+        return res.render('login', { 
+          errors: {
+            email: {
+              msg: 'Credenciales inválidas. Inserta un email registrado y su respectiva contraseña'
+            }
           }
         })
-        .then(function() {
-          res.redirect('/users');
-        }); 
-      },
-      suspend: function(req, res, next) {
-        req.session.destroy();
-        res.cookie('authRemember', ''.email, {maxAge: -1});
-        res.render('suspend');
-      },     
+      } else {
+        res.render('login', {
+          errors: errors.mapped(),
+          old: req.body
+        })
+      }
     }
-    module.exports = usersController;
+    )},
+    logout: function(req, res, next) {
+      req.session.destroy();
+      res.cookie('authRemember', ''.email, {maxAge: -1});
+      res.redirect('/');
+    },      
+    regEdit: function(req, res, next) {
+      db.Usuario.findByPk(req.params.id)
+      .then(function(elUsuario) {
+        db.FiscalC.findAll()
+        .then(function(fiscalCond){
+          res.render('registerEdit', {elUsuario:elUsuario, fiscalCond:fiscalCond});
+        })
+      })
+    },
+    regUpdt: function(req, res) {
+      db.Usuario.update({
+        email: req.body.email,
+        password: (!req.body.password) ? this.password : bcrypt.hashSync(req.body.password, 10),
+        name_fantasy: req.body.name_fantasy,
+        province: req.body.province,
+        municipality: req.body.municipality,
+        location: req.body.location,
+        postal_code: req.body.postal_code,
+        adress: req.body.adress,
+        telephone: req.body.telephone,
+        business_name: req.body.business_name,
+        cuit: req.body.cuit,
+        fiscal_condition_id: req.body.fiscal_condition_id,
+        image: (!req.files[0]) ? this.image : req.files[0].filename,
+        active: 1         
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(function() {
+        res.redirect('/users');
+      }); 
+    }
+  }
+  module.exports = usersController;

@@ -36,8 +36,6 @@ router.get('/login', guestMiddleware, usersController.login); //LOGIN
 router.post('/login', loginValidation, userIdVerifyMiddleware.suspend, usersController.verify); //LOGIN
 /************ SOLO USUARIOS LOGUEADOS ************/
 router.get('/', authMiddleware, usersController.users); //PERFIL DEL USR
-/************ SOLO USUARIOS SUSPENDIDOS ************/
-router.get('/suspend', usersController.suspend); //USUARIO SUSPENDIDO
 /************ PARA TODOS ************/
 router.get('/logout', usersController.logout); //LOGOUT
 

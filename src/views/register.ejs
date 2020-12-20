@@ -63,93 +63,93 @@
         
         <div class="form-group">
           <label for="province" id="province" class="">Provincia
-          <select name="province" id="province" class="form-control">
-            <option hidden>Selecciona una provincia...</option>
-          </select>
+            <select name="province" id="province" class="form-control">
+              <option hidden>Selecciona una provincia...</option>
+            </select>
           </label>
           <small class="text-danger" id="province"></small>      
         </div>
         
         <div class="form-group">
           <label for="municipality" id="municipality" class="">Municipio
-          <select name="municipality" id="municipality" class="form-control" disabled>
-            <option hidden>Selecciona una municipio...</option>
-          </select>
+            <select name="municipality" id="municipality" class="form-control" disabled>
+              <option hidden>Selecciona una municipio...</option>
+            </select>
           </label>
           <small class="text-danger" id="municipality"></small>      
         </div>
         
         <div class="form-group">           
           <label for="location" class="">Localidad 
-          <input type="text" name="location" class="form-control" id="location" aria-describedby="emailHelp" disabled placeholder="Completa tu localidad...">
+            <input type="text" name="location" class="form-control" id="location" aria-describedby="emailHelp" disabled placeholder="Completa tu localidad...">
           </label>
           <small class="text-danger" id="location"></small>      
         </div>
         
         <div class="form-group">           
           <label for="postal_code" class="">Codigo Postal 
-          <input type="text" name="postal_code" class="form-control" id="postal_code" aria-describedby="emailHelp" disabled placeholder="Completa tu codigo postal...">
+            <input type="text" name="postal_code" class="form-control" id="postal_code" aria-describedby="emailHelp" disabled placeholder="Completa tu codigo postal...">
           </label>
           <small class="text-danger" id="postal_code"></small>
         </div>
         
         <div class="form-group">           
           <label for="adress" class="">Direccion
-          <input type="text" name="adress" class="form-control" id="adress" aria-describedby="emailHelp">
+            <input type="text" name="adress" class="form-control" id="adress" aria-describedby="emailHelp">
           </label>
           <small class="text-danger" id="adress"></small>   
         </div>
         
         <div class="form-group">
           <label for="telephone" class=""> Teléfono
-          <input type="text" name="telephone" class="form-control" id="telephone" aria-describedby="emailHelp">
+            <input type="text" name="telephone" class="form-control" id="telephone" aria-describedby="emailHelp">
           </label>
           <small class="text-danger" id="telephone"></small>
         </div>
         
         <div class="form-group">       
           <label for="business_name" class=""> Razón social
-          <input type="text" name="business_name" class="form-control" id="business_name" aria-describedby="emailHelp">  
+            <input type="text" name="business_name" class="form-control" id="business_name" aria-describedby="emailHelp">  
           </label>           
           <small class="text-danger" id="business_name"></small>
         </div>
         
         <div class="form-group">
           <label for="cuit" class=""> CUIT / CUIL
-          <input type="text" name="cuit" class="form-control" id="cuit" aria-describedby="emailHelp">
+            <input type="text" name="cuit" class="form-control" id="cuit" aria-describedby="emailHelp">
           </label>
           <small class="text-danger" id="cuit"></small>
         </div>
         
         <div class="form-group">              
           <label for="fiscal_condition_id" class="">Condicion fiscal
-          <select name="fiscal_condition_id" id="fiscal_condition_id" class="form-control">
-            <option hidden>Selecciona una Condicion Fiscal...</option>
-            <%for (let i=0; i<fiscalCond.length; i++) { %>
-              <option value="<%=fiscalCond[i].id%>">
-                <%= fiscalCond[i].name%>
-              </option>
-              <% } %>
-            </select>
+            <select name="fiscal_condition_id" id="fiscal_condition_id" class="form-control">
+              <option hidden>Selecciona una Condicion Fiscal...</option>
+              <%for (let i=0; i<fiscalCond.length; i++) { %>
+                <option value="<%=fiscalCond[i].id%>">
+                  <%= fiscalCond[i].name%>
+                </option>
+                <% } %>
+              </select>
             </label>
             <small class="text-danger" id="fiscal_condition_id"></small>
           </div>
           
-      </div>
-        
-      <div class="imagen_usuario col-12">
-          
-        <h5>IMAGEN USUARIO</h5>
-          
-        <div class="col-12 botonCargarImg">
-          <input class="btn btn-succes file" type="file" name="imgUser" id="imgUser">
         </div>
-
-      </div>
+        
+        <div class="imagen_usuario col-12">
+          
+          <h5>IMAGEN USUARIO</h5>
+          
+          <div class="col-12 botonCargarImg">
+            <input class="btn btn-succes file" type="file" name="imgUser" id="imgUser">
+          </div>
+          
+        </div>
         
         
-      <button id="crear" type="submit" class="btn btn-success btn-lg btn-block botonForm2">Crear Usuario 
-      </button>
+        <button id="crear" type="submit" class="btn btn-success btn-lg btn-block botonForm2">Crear Usuario 
+        </button>
         
       </form>
       
@@ -160,7 +160,7 @@
     
     <!-- Include End Body Scripts -->
     <%- include('partials/_endBodyScripts') %>
+    <script src="/js/api/apiProvMuni_register.js"></script>
     <script src="/js/validationUser.js"></script>
-    <script src="/js/register.js"></script>
   </body>
   </html>

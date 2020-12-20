@@ -33,6 +33,9 @@ module.exports = (sequelize, dataTypes) => {
     image:{
       type: dataTypes.STRING(100)
     },
+    visit_count:{
+      type: dataTypes.INTEGER(10)
+    },
     category_id:{
       type: dataTypes.INTEGER(10),
     },

@@ -48,9 +48,9 @@ div.precioContainer div.precioRow h4.precioh4{
     margin: 10px 0;
     color: var(--violeta-textos);
 }
-div.precioContainer div.precioRow h4.precioh4 small.smallPrecioh4::before {
+/* div.precioContainer div.precioRow h4.precioh4 small.smallPrecioh4::before {
     content: "$ ";
-}
+} */
 
 div.precioContainer div.precioRow h4.precioh4 small.smallPrecioh4{
     font-size: 20px;
@@ -82,9 +82,9 @@ div.totalRow h5.totalh5{
     font-weight: bold;
 }
 
-small.smalltotalh5::before {
+/* small.smalltotalh5::before {
     content: "$ ";
-}
+} */
 small.smalltotalh5{
     font-size: 20px;
     margin: 10px 0;

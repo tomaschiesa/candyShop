@@ -23,7 +23,7 @@
   <section class="productosDestacados container">
     <div class="row">
       <div class="productosDestacadostit col-12">
-        <h1 class="titularProductsBest"> Productos mas vendidos!!!</h1>
+        <h1 class="titularProductsBest"> Productos más visitados!!!</h1>
       </div>
       <% for (product of losProductos) { 
         let getDiscountPercentage = discount => (100 - discount) / 100;
@@ -44,8 +44,8 @@
               <div class="infoProducto">
                 <h5><%= product.name %></h5>
                 <p> <%= product.detail %></p>  
-                <p class="precioSinDescuento <%=displayDiscount%>"><%= milesGenerator (originalPrice) %> $</p>
-                <b><%= milesGenerator (finalPrice) %> $</b>
+                <p class="precioSinDescuento <%=displayDiscount%>">$ <%= milesGenerator (originalPrice) %></p>
+                <b id="priceFinalDolarAPesos">$ <%= milesGenerator (finalPrice) %></b>
                 <a class="carrito" href="/sales/purchase"><i class="fas fa-shopping-cart"></i></a>
                 <h1></h1>
               </div>
@@ -62,16 +62,17 @@
     
     <!-- Include End Body Scripts -->
     <%- include('partials/_endBodyScripts') %>
-
+    
     <script>Swal.fire({
-  title: '<a href="https://www.instagram.com/candyshop.ar" target="_blank"><img src="/images/qrInstagram.png" width="300px" alt="Instagram"></a>',
-  html: '<strong>Seguinos en instagram! ❤ </strong>',
-  showClass: {
-    popup: 'animate__animated animate__fadeInDown'
-  },
-  hideClass: {
-    popup: 'animate__animated animate__fadeOutUp'
-  }
-})</script>
+      title: '<a href="https://www.instagram.com/candyshop.ar" target="_blank"><img src="/images/qrInstagram.png" width="300px" alt="Instagram"></a>',
+      html: '<strong>Seguinos en instagram! ❤ </strong>',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })</script>
+    
   </body>
   </html>

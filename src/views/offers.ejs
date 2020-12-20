@@ -52,8 +52,8 @@
                 <div class="infoProducto">
                   <h5><%= product.name %></h5>
                   <p> <%= product.detail %></p>
-                  <p class="precioSinDescuento <%=displayDiscount%>"><%= milesGenerator (originalPrice) %> $</p>
-                  <b><%= milesGenerator (finalPrice) %> $</b>
+                  <p class="precioSinDescuento <%=displayDiscount%>">$ <%= milesGenerator (originalPrice) %></p>
+                  <b id="priceFinalDolarAPesos">$ <%= milesGenerator (finalPrice) %></b>
                   <a class="carrito" href="/sales/purchase"><i class="fas fa-shopping-cart"></i></a>
                 </div>
               </a>

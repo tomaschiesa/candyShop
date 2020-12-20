@@ -111,6 +111,7 @@ let productsController = {
       stock: req.body.stock,
       price: req.body.price,
       image: (!req.files[0]) ? this.image : req.files[0].filename,
+      visit_count: req.body.visit_count,
       category_id: req.body.category,
       active: req.body.active
     },

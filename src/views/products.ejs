@@ -22,19 +22,19 @@
       </div>
     </div>
   </section>
-    
-    <div class="products-wrapper container">
-      <div class="row">
-        
-        <!-- MUESTRA DE LOS PRODUCTOS -->
-        <section class="productosDestacados container">
-          <div class="row">
-            <% for (product of losProductos) { 
-              let getDiscountPercentage = discount => (100 - discount) / 100;
-              let originalPrice = (product.price).toFixed(0);
-              let finalPrice = (product.price * getDiscountPercentage(product.offer_discount)).toFixed(0); 
-              %>
-              <%if (product.name != 'Milanesa') {%>
+  
+  <div class="products-wrapper container">
+    <div class="row">
+      
+      <!-- MUESTRA DE LOS PRODUCTOS -->
+      <section class="productosDestacados container">
+        <div class="row">
+          <% for (product of losProductos) { 
+            let getDiscountPercentage = discount => (100 - discount) / 100;
+            let originalPrice = (product.price).toFixed(0);
+            let finalPrice = (product.price * getDiscountPercentage(product.offer_discount)).toFixed(0); 
+            %>
+            <%if (product.name != 'Milanesa') {%>
               <div class="col-12 col-sm-6 col-lg-3">
                 <section class="product-box">
                   <article class="elProducto">
@@ -50,8 +50,8 @@
                       <div class="infoProducto">
                         <h5><%= product.name %></h5>
                         <p> <%= product.detail %></p>  
-                        <p class="precioSinDescuento <%=displayDiscount%>"><%= milesGenerator (originalPrice) %> $</p>
-                        <b><%= milesGenerator (finalPrice) %> $</b>
+                        <p class="precioSinDescuento <%=displayDiscount%>">$ <%= milesGenerator (originalPrice) %></p>
+                        <b id="priceFinalDolarAPesos">$ <%= milesGenerator (finalPrice) %></b>
                         <a class="carrito" href="/sales/purchase"><i class="fas fa-shopping-cart"></i></a>
                       </div>
                     </a>
@@ -72,5 +72,6 @@
       
       <!-- Include End Body Scripts -->
       <%- include('partials/_endBodyScripts') %>
-    </body>
-    </html>
+        
+      </body>
+      </html>

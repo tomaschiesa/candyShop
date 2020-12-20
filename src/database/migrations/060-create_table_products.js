@@ -35,6 +35,9 @@ module.exports = {
       image:{
         type: Sequelize.DataTypes.STRING(100)
       },
+      visit_count: {
+        type: Sequelize.DataTypes.INTEGER(10)
+      },
       category_id:{
         type: Sequelize.DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,

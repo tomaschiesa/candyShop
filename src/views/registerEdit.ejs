@@ -49,85 +49,85 @@
       </div>
       
       <div class="datos col-12">
-
+        
         <h5>DATOS</h5>
         
         <div class="form-group">            
           <label for="name_fantasy">Nombre Empresa
-          <input type="text" name="name_fantasy" class="form-control " id="name_fantasy" aria-describedby="emailHelp" value="<%= elUsuario.name_fantasy %>">
+            <input type="text" name="name_fantasy" class="form-control " id="name_fantasy" aria-describedby="emailHelp" value="<%= elUsuario.name_fantasy %>">
           </label>        
           <small class="text-danger" id="name_fantasy"></small>
         </div>
         
         <div class="form-group">
           <label for="province" id="province" class="">Provincia
-          <select name="province" id="province" class="form-control ">
-            <option><%= elUsuario.province %></option>
-          </select>
+            <select name="province" id="province" class="form-control ">
+              <option><%= elUsuario.province %></option>
+            </select>
           </label>
           <small class="text-danger" id="province"></small>
         </div>
         
         <div class="form-group">
           <label for="municipality" id="municipality" class="">Municipio
-          <select name="municipality" id="municipality" class="form-control ">
-            <option><%= elUsuario.municipality %></option>
-          </select>
+            <select name="municipality" id="municipality" class="form-control ">
+              <option><%= elUsuario.municipality %></option>
+            </select>
           </label>
           <small class="text-danger" id="municipality"></small>
         </div>
         
         <div class="form-group">           
           <label for="location">Localidad
-          <input type="text" name="location" class="form-control " id="location" aria-describedby="emailHelp" value="<%= elUsuario.location %>" placeholder="Completa tu localidad...">
+            <input type="text" name="location" class="form-control " id="location" aria-describedby="emailHelp" value="<%= elUsuario.location %>" placeholder="Completa tu localidad...">
           </label>
           <small class="text-danger" id="location"></small>
         </div>
         
         <div class="form-group">           
           <label for="postal_code">Codigo Postal
-          <input type="text" name="postal_code" class="form-control " id="postal_code" aria-describedby="emailHelp" value="<%= elUsuario.postal_code %>" disabled placeholder="Completa tu codigo postal...">           
+            <input type="text" name="postal_code" class="form-control " id="postal_code" aria-describedby="emailHelp" value="<%= elUsuario.postal_code %>" disabled placeholder="Completa tu codigo postal...">           
           </label>
           <small class="text-danger" id="postal_code"></small>
         </div>
         
         <div class="form-group">           
           <label for="adress">Direccion
-          <input type="text" name="adress" class="form-control " id="adress" aria-describedby="emailHelp" value="<%= elUsuario.adress %>">           
+            <input type="text" name="adress" class="form-control " id="adress" aria-describedby="emailHelp" value="<%= elUsuario.adress %>">           
           </label>
           <small class="text-danger" id="adress"></small>
         </div>
         
         <div class="form-group">
           <label for="telephone"> Teléfono
-          <input type="number" name="telephone" class="form-control " id="telephone" aria-describedby="emailHelp" value="<%= elUsuario.telephone %>">   
+            <input type="number" name="telephone" class="form-control " id="telephone" aria-describedby="emailHelp" value="<%= elUsuario.telephone %>">   
           </label>       
           <small class="text-danger" id="telephone"></small>
         </div>
         
         <div class="form-group">       
           <label for="business_name">Razón social
-          <input type="text" name="business_name" class="form-control " id="business_name" aria-describedby="emailHelp" value="<%= elUsuario.business_name %>">         
+            <input type="text" name="business_name" class="form-control " id="business_name" aria-describedby="emailHelp" value="<%= elUsuario.business_name %>">         
           </label>   
           <small class="text-danger" id="business_name"></small>
         </div>
         
         <div class="form-group">
           <label for="cuit">CUIT/CUIL
-          <input type="number" name="cuit" class="form-control " id="cuit" aria-describedby="emailHelp" value="<%= elUsuario.cuit %>">
+            <input type="number" name="cuit" class="form-control " id="cuit" aria-describedby="emailHelp" value="<%= elUsuario.cuit %>">
           </label>
           <small class="text-danger" id="cuit"></small>
         </div>
         
         <div class="form-group">    
           <label for="fiscal_condition_id">Condicion fiscal
-          <select name="fiscal_condition_id" id="fiscal_condition_id" class="form-control col-md-4 col-mb-6">
-            <%for (let i=0; i<fiscalCond.length; i++) { %>
-              <option value="<%=fiscalCond[i].id%>" <%= (elUsuario.fiscal_condition_id == fiscalCond[i].id) ? 'selected' : '' %>>
-                <%= fiscalCond[i].name%>
-              </option>
-              <% } %>
-            </select>
+            <select name="fiscal_condition_id" id="fiscal_condition_id" class="form-control col-md-4 col-mb-6">
+              <%for (let i=0; i<fiscalCond.length; i++) { %>
+                <option value="<%=fiscalCond[i].id%>" <%= (elUsuario.fiscal_condition_id == fiscalCond[i].id) ? 'selected' : '' %>>
+                  <%= fiscalCond[i].name%>
+                </option>
+                <% } %>
+              </select>
             </label>
             <small class="text-danger" id="fiscal_condition"></small>
           </div>
@@ -154,7 +154,7 @@
     
     <!--Include footer -->
     <%- include('partials/footer') %>
-    <script src="/js/registerEdit.js"></script>
+    <script src="/js/api/apiProvMuni_registerEdit.js"></script>
     <script src="/js/validationUserEdit.js"></script>
     
     <!-- Include End Body Scripts -->
