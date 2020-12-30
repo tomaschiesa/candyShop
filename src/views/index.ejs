@@ -44,8 +44,10 @@
               <div class="infoProducto">
                 <h5><%= product.name %></h5>
                 <p> <%= product.detail %></p>  
-                <p class="precioSinDescuento <%=displayDiscount%>">$ <%= milesGenerator (originalPrice) %></p>
-                <b id="priceFinalDolarAPesos">$ <%= milesGenerator (finalPrice) %></b>
+                <small class="d-none" id='moneyPublish'><%= product.publish_money_id %></small>
+                <small class="d-none" id='moneyDisplay'><%= product.display_money_id %></small>
+                <p id="discountMoneyConvert" class="precioSinDescuento <%=displayDiscount%>"><!--$ --><%= milesGenerator (originalPrice) %></p>
+                <b id="priceFinalMoneyConvert"><!--$ --><%= milesGenerator (finalPrice) %></b>
                 <a class="carrito" href="/sales/purchase"><i class="fas fa-shopping-cart"></i></a>
                 <h1></h1>
               </div>

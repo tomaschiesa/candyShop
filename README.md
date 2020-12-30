@@ -1,6 +1,22 @@
 
 # Versiones:
 
+-> 
+ - 
+
+-> 3.4.1
+ - Creación de campos en DB para selección de conversión.
+ - Se modifica el index y las vistas de producto para la conversion de moneda automatica.
+ - Se corrigen estilos y tamaños de tipografias en las vistas de articulos.
+ - Se corrige en la vista de oferta y destacados una falla que no mostraba correctamente el titulo de la sección.
+ - Se agruparon las vistas y corrigieron tanto los imput como las rutas
+ - Se arreglaron detalles que mostraban mal los options en los form cuando para indicar el valor selected correcto.
+ - Se puede desde el CRUD de producto indicar monera de publicacion, moneda a mostrar.
+ - Se agrega la muestra de talles en la vista detalle (XS - S - M - L - XL - XXL)
+ - Aun pendiente de agregar color y meterlo en la base de datos (codigo oculto, se continuara su desarrollo).
+ - Se actualizaron las migraciones y seeders con los cambios nuevos en la DB.
+ - Los precios de articulos son irrisorios por las pruebas de convertibilidad.
+ - Se actualizo el numero de versión en package.json y en package-lock.json.
 
 -> 3.4.0
  - Creación de script API Dolar. Docu comentada en el modulo.

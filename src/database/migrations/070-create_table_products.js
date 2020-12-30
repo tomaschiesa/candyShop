@@ -46,6 +46,22 @@ module.exports = {
           key: 'id'
         }
       },
+      publish_money_id:{
+        type: Sequelize.DataTypes.INTEGER(10).UNSIGNED,
+        allowNull: false,
+        references: {
+          model: 'moneys_publish',
+          key: 'id'
+        }
+      },
+      display_money_id:{
+        type: Sequelize.DataTypes.INTEGER(10).UNSIGNED,
+        allowNull: false,
+        references: {
+          model: 'moneys_display',
+          key: 'id'
+        }
+      },
       active:{
         type: Sequelize.DataTypes.BOOLEAN(1),
         allowNull: false

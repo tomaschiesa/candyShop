@@ -4,7 +4,7 @@
 <head>
   
   <!-- Include Head -->
-  <%- include('partials/_contentHead') %>
+  <%- include('../../partials/_contentHead') %>
   <!--/ Include Head-->
   
   <title>CandyShop - Detalle Producto</title>
@@ -14,7 +14,7 @@
 <body>
   
   <!--Include Header-->
-  <%- include('partials/header') %>
+  <%- include('../../partials/header') %>
   
   <section class="containerPrimary container cajaProductDetail">
     <div class="rowPrimary row">
@@ -38,7 +38,7 @@
               let getDiscountPercentage = discount => (100 - discount) / 100;
               let finalPrice = (product.price * getDiscountPercentage(product.offer_discount)).toFixed(0); 
               %>
-              <h4 class="precioh4">Precio unitario: <small id='priceFinalDolarAPesos' class="smallPrecioh4">$ <%= milesGenerator(finalPrice) %></small></h4>
+              <h4 class="precioh4">Precio unitario: <small id='discountMoneyConvert' class="smallPrecioh4"><%= milesGenerator(finalPrice) %></small></h4>
             </div> <!-- ./precioRow-->
           </div> <!-- ./precioContainer-->
           
@@ -58,10 +58,11 @@
                 
               </div> <!-- ./cantidadRow-->
             </div> <!-- ./cantidadContainer-->
-            
+            <small class="d-none" id='moneyPublish'><%= elProducto.publish_money_id %></small>
+            <small class="d-none" id='moneyDisplay'><%= elProducto.display_money_id %></small>
             <div class="totalContainer container col-12">
               <div class="totalRow row">
-                <h5 class="totalh5">Total:  <small id='priceFinalDolarAPesos' class="smalltotalh5">$ <%= milesGenerator(finalPrice) %></small></h5>
+                <h5 class="totalh5">Total:  <small id='priceFinalMoneyConvert' class="smalltotalh5"><%= milesGenerator(finalPrice) %></small></h5>
               </div> <!-- ./totalRow-->
             </div> <!-- ./totalContainer-->
             
@@ -73,11 +74,18 @@
             
           </div> <!-- ./productoDetalladoRow-->
         </article> <!-- ./productoDetalladoContainer-->
-        
-        <article class="descripcionDetalladaDetail col-12">
+
+        <article class="d-none descripcionDetalladaDetail col-12">
           <div class="descripcionDetalladaRow row">
-            <b class="col-3">Descripción detallada: </b>
-            <p class="col-9"><%= elProducto.detail %></p>
+            <b class="col-12 col-sm-3">Talles disponibles: </b>
+            <p class="fontTalles col-12 col-sm-7">XS - S - M - L - XL - XXL<%= //elProducto.detail %></p>
+          </div>
+        </article> <!-- ./descripcionDetallada -->
+        
+        <article class="descripcionDetalladaDetail col-12 ">
+          <div class="descripcionDetalladaRow row">
+            <b class="col-12 col-sm-3">Descripción detallada: </b>
+            <p class="col-12 col-sm-9"><%= elProducto.detail %></p>
           </div>
         </article> <!-- ./descripcionDetallada -->
         
@@ -85,10 +93,10 @@
     </section> <!-- ./containerPrimary -->
     
     <!--Include Footer -->
-    <%- include('partials/footer') %>
+    <%- include('../../partials/footer') %>
     
     <!-- Include EndBodyScripts -->
-    <%- include('partials/_endBodyScripts') %>
+    <%- include('../../partials/_endBodyScripts') %>
       
     </body>
     </html>

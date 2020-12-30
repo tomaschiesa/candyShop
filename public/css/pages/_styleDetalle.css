@@ -64,7 +64,7 @@ div.cantidadContainer div.cantidadRow label.cantidadLabel{
     padding: 6px 0 0 0;
     margin: 10px 0;
     color: var(--violeta-textos);
-} h5{}
+}
 
 div.cantidadContainer div.cantidadRow select.cantidadSelect{
     margin: 10px 0;
@@ -107,6 +107,12 @@ article.descripcionDetalladaDetail{
     background-color:rgb(235, 235, 235);
 }
 
+article.descripcionDetalladaDetail div p.fontTalles{
+    font: 14px "Josefin Sans", Helvetica, Arial, sans-serif;
+    color: blue;
+    margin-bottom: 0;
+}
+
 
 @media (max-width: 768px){
     
@@ -117,14 +123,14 @@ article.descripcionDetalladaDetail{
     section.containerPrimary div.rowPrimary article.descripcionDetallada div.descripcionDetalladaRow p{
         padding-left: 60px;
     }
-
+    
     section.containerPrimary div.rowPrimary article.productoDetalladoContainer{
         max-width: 80%;
     }
-
+    
     div.containerButtonDetail{
         text-align: center;
     }
-
-
+    
+    
 }

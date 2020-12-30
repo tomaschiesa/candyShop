@@ -3,7 +3,7 @@
 
 <head>
   <!-- Include Head -->
-  <%- include('partials/_contentHead') %>
+  <%- include('../../partials/_contentHead') %>
   
   <title>CandyShop - Home</title>
 </head>
@@ -11,15 +11,21 @@
 
 <body>
   <!--include HEADER-->
-  <%- include('partials/header') %>
+  <%- include('../../partials/header') %>
   
   <!--include CAROUSEL-->
-  <%- include('partials/carousel') %>
+  <%- include('../../partials/carousel') %>
   
   <section class="productosDestacadostit container">
     <div class="row">
       <div class="col-12">
-        <h1 class="titularProductsBest"> Buscas <%= laCategoria.name %>, aca tenemos para ofrecerte! </h1>
+        <h1 class="titularProductsBest">Productos 
+        <%if (grupo == 'cheeky'){%>
+          DESTACADOS!
+          <%} if (grupo == 'oferta'){%>
+          en OFERTA!
+          <%}%>
+        </h1>
       </div>
     </div>
   </section>
@@ -32,24 +38,24 @@
           let originalPrice = (product.price).toFixed(0);
           let finalPrice = (product.price * getDiscountPercentage(product.offer_discount)).toFixed(0); 
           %>
-          <%if (product.name != 'Milanesa') {%>
           <div class="col-12 col-sm-6 col-lg-3">
             <article class="elProducto">
               <a href="/products/<%= `${product.id}` %>">
                 
                 <div class="imagenProducto">
                   <%let displayDiscount = product.offer_discount <= 0 ? 'd-none' : '';%>
-                  <h6 class="<%=displayDiscount%>"><%= product.offer_discount %>% OFF </h6>
-                  
+                  <h6 class="<%=displayDiscount%>"><%= product.offer_discount %>% OFF</h6>
                   <img src="/images/uploads/productDetail/<%= product.image %>                   
                   " alt="imagen de producto <%= product.name %>">
                 </div>
                 
                 <div class="infoProducto">
                   <h5><%= product.name %></h5>
-                  <p> <%= product.detail %></p>  
-                  <p class="precioSinDescuento <%=displayDiscount%>">$ <%= milesGenerator (originalPrice) %></p>
-                  <b id="priceFinalDolarAPesos">$ <%= milesGenerator (finalPrice) %></b>
+                  <p> <%= product.detail %></p>
+                  <small class="d-none" id='moneyPublish'><%= product.publish_money_id %></small>
+                <small class="d-none" id='moneyDisplay'><%= product.display_money_id %></small>
+                  <p id="discountMoneyConvert" class="precioSinDescuento <%=displayDiscount%>"><%= milesGenerator (originalPrice) %></p>
+                  <b id="priceFinalMoneyConvert"><%= milesGenerator (finalPrice) %></b>
                   <a class="carrito" href="/sales/purchase"><i class="fas fa-shopping-cart"></i></a>
                 </div>
               </a>
@@ -57,14 +63,13 @@
             </article>
           </div>
           <% } %>
-          <% } %>
         </div>
       </section>
       
       <!--Include footer -->
-      <%- include('partials/footer') %>
+      <%- include('../../partials/footer') %>
       
       <!-- Include End Body Scripts -->
-      <%- include('partials/_endBodyScripts') %>
+      <%- include('../../partials/_endBodyScripts') %>
     </body>
     </html>

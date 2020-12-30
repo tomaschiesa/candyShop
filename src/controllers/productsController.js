@@ -19,34 +19,45 @@ let productsController = {
       }
     })
     .then(function(losProductos) {
-      res.render('products', {losProductos:losProductos, milesGenerator: milSeparator})
+      res.render('products/productsViews/products', {losProductos:losProductos, milesGenerator: milSeparator})
     })
   },
   // PRODUCTOS EN OFERTA
   offers: function(req, res, next) {
+    let grupo = 'oferta'
     db.Prod.findAll({
       where:{
-        offer_check: {[db.Sequelize.Op.eq] : 1}
+        offer_check: {[db.Sequelize.Op.eq] : true}
       }
     })
     .then(function(losProductos) {
-      res.render('offers', {losProductos:losProductos, milesGenerator: milSeparator})
+      // return res.json (losProductos[0].top_check)
+      res.render('products/productsViews/offers', {losProductos:losProductos, grupo, milesGenerator: milSeparator})
     })
   },
   // PRODUCTOS DESTACADOS
   cheeky: function(req, res, next) {
+    let grupo = 'cheeky'
     db.Prod.findAll({
       where:{
-        top_check: {[db.Sequelize.Op.eq] : 1}
+        top_check: {[db.Sequelize.Op.eq] : true}
       }
     })
     .then(function(losProductos) {
-      res.render('offers', {losProductos:losProductos, milesGenerator: milSeparator})
+      res.render('products/productsViews/offers', {losProductos:losProductos, grupo, milesGenerator: milSeparator})
     })
   },
   // CREAR - muestra formulario vacio para crear
   create: function(req, res, next) {
-    res.render('productCreateForm');
+    db.MoneyPublish.findAll({
+    })
+    .then(function(MoneyPublish) {
+      db.MoneyDisplay.findAll({
+      })
+      .then(function(MoneyDisplay) {
+        res.render('products/productsCRUD/productCreateForm', {MoneyPublish:MoneyPublish, MoneyDisplay:MoneyDisplay});
+      })
+    })
   },
   // CREAR - Almacena producto
   store: function(req, res, next) {
@@ -60,6 +71,8 @@ let productsController = {
       price: req.body.price,
       image: (req.files[0] == undefined) ? 'no-image.jpg' : req.files[0].filename,
       category_id: req.body.category,
+      publish_money_id: req.body.moneyPublish,
+      display_money_id: req.body.moneyDisplay,
       active: 1
     })
     res.redirect('/products')
@@ -76,13 +89,13 @@ let productsController = {
       let activeStat = disponible == true ? 'Añadir al carrito' : 'Venta pausada';
       let activeStatDisable = disponible == true ? '' : 'disabled';
       let activeStatClass = disponible == true ? 'btn-success' : 'btn-secondary';
-      res.render('productDetail', {elProducto:elProducto, activeStat, activeStatDisable, activeStatClass, milesGenerator: milSeparator});
+      res.render('products/productsViews/productDetail', {elProducto:elProducto, activeStat, activeStatDisable, activeStatClass, milesGenerator: milSeparator});
     })
   },
   allProductsModify: function(req, res, next) {
     db.Prod.findAll()
     .then(function(losProductos) {
-      res.render('allProductsModify', {losProductos:losProductos, milesGenerator: milSeparator})
+      res.render('products/productsCRUD/allProductsModify', {losProductos:losProductos, milesGenerator: milSeparator})
     })
   },
   // MODIFICAR - muestra formulario para editar producto con el producto
@@ -92,10 +105,14 @@ let productsController = {
       //  return res.send((elProducto.category_id).toString())
       db.Category.findAll()
       .then(function(resultadoCategorias){
-        let categoryCheck = elProducto.category_id == resultadoCategorias.id ? 'selected' : '';
-        let activeStat = elProducto.active == true ? 'La venta del producto se encuentra ACTIVA' : 'La venta del producto se encuentra  PAUSADA';
-        // res.send(elProducto.image)
-        res.render ('productEditForm', {elProducto:elProducto, activeStat, resultadoCategorias:resultadoCategorias, categoryCheck})//
+        db.MoneyPublish.findAll()
+        .then(function(resultadoMoneyPublish){
+          db.MoneyDisplay.findAll()
+          .then(function(resultadoMoneyDisplay){
+            let activeStat = elProducto.active == true ? 'La venta del producto se encuentra ACTIVA' : 'La venta del producto se encuentra  PAUSADA';
+            res.render ('products/productsCRUD/productEditForm', {elProducto:elProducto, activeStat, resultadoCategorias:resultadoCategorias, resultadoMoneyPublish:resultadoMoneyPublish, resultadoMoneyDisplay:resultadoMoneyDisplay,})//
+          })   
+        })   
       })      
     })
   },
@@ -113,6 +130,8 @@ let productsController = {
       image: (!req.files[0]) ? this.image : req.files[0].filename,
       visit_count: req.body.visit_count,
       category_id: req.body.category,
+      publish_money_id: req.body.moneyPublish,
+      display_money_id: req.body.moneyDisplay,
       active: req.body.active
     },
     {
@@ -146,7 +165,7 @@ let productsController = {
       .then(function(laCategoria){
         let paramId = req.params.id
         // return res.send(typeof Number(paramId))
-        res.render('categoryFilterView', {losProductos:losProductos, paramId, laCategoria:laCategoria, milesGenerator: milSeparator})
+        res.render('products/productsViews/categoryFilterView', {losProductos:losProductos, paramId, laCategoria:laCategoria, milesGenerator: milSeparator})
       })
     })
   },
@@ -161,7 +180,7 @@ let productsController = {
     .then(function(losProductos) {
       db.Category.findByPk(req.params.id)
       .then(function(laCategoria){
-        res.render('categoryFilterView', {losProductos:losProductos, laCategoria:laCategoria, milesGenerator: milSeparator})
+        res.render('products/productsViews/categoryFilterView', {losProductos:losProductos, laCategoria:laCategoria, milesGenerator: milSeparator})
       })
     })
   },
@@ -176,7 +195,7 @@ let productsController = {
     .then(function(losProductos) {
       db.Category.findByPk(req.params.id)
       .then(function(laCategoria){
-        res.render('categoryFilterView', {losProductos:losProductos, laCategoria:laCategoria, milesGenerator: milSeparator})
+        res.render('products/productsViews/categoryFilterView', {losProductos:losProductos, laCategoria:laCategoria, milesGenerator: milSeparator})
       })
     })
   }

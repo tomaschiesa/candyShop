@@ -3,14 +3,14 @@
 
 <head>
   <!-- Include Head -->
-  <%- include('partials/_contentHead') %>
+  <%- include('../../partials/_contentHead') %>
   
   <title>CandyShop - Carga Producto</title>
 </head>
 
 <body>
   <!--include HEADER-->
-  <%- include('partials/header') %>
+  <%- include('../../partials/header') %>
   
   <div class="container col-md-8 col-sm-12 contenedorProductEditForm">
     <div class="row col-12">
@@ -29,7 +29,7 @@
         
         <div class="form-group col-12">
           <label for="name">Nombre del Producto:
-            <input type="text" name="name" placeholder="Ej: Alfajor Jorgito" class="form-control" id="name">
+            <input type="text" name="name" placeholder="Ej: Nombre desctiptivo del producto" class="form-control" id="name">
           </label>
           <small class="text-danger" id="name"></small>
         </div>
@@ -77,6 +77,31 @@
           </label>
           <small class="text-danger" id="price"></small>
         </div>
+
+        <div class="form-group col-12">
+          <label class="moneyPublish" for="moneyPublish">MONEDA DE CARGA DEL PRODUCTO:
+            <select name="moneyPublish" class="custom-select" id="moneyPublish">
+              <option selected hidden>Seleccione una opcion...</option>
+              <%for (let i=0; i<MoneyPublish.length; i++) { %>
+                <option value="<%=MoneyPublish[i].id%>"><%=MoneyPublish[i].name%></option>
+                <% } %>
+            </select>
+          </label>
+          <small class="text-danger" id="category"></small>
+        </div>
+
+        <div class="form-group col-12">
+          <label class="moneyDisplay" for="moneyDisplay">MONEDA EN LA QUE SE MUESTRA PUBLICADO EN PAGINA:
+            <select name="moneyDisplay" class="custom-select" id="moneyDisplay">
+              <option selected hidden>Seleccione una opcion...</option>
+              <%for (let i=0; i<MoneyDisplay.length; i++) { %>
+                <option value="<%=MoneyDisplay[i].id%>"><%=MoneyDisplay[i].name%></option>
+                <% } %>
+            </select>
+          </label>
+          <small class="text-danger" id="category"></small>
+        </div>
+
 
       </div>
 
@@ -144,10 +169,10 @@
   </div> <!-- ./div-contenidoForm -->
   
   <!--Include footer -->
-  <%- include('partials/footer') %>
+  <%- include('../../partials/footer') %>
   
   <!-- Include End Body Scripts -->
-  <%- include('partials/_endBodyScripts') %>
+  <%- include('../../partials/_endBodyScripts') %>
   <script src="/js/validationProduct.js"></script>
   
 </body>

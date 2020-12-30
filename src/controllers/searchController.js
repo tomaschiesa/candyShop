@@ -19,7 +19,7 @@ let searchController = {
     })
     .then(function (laBusqueda) {
       // return res.send(typeof laBusqueda[0])
-      res.render('productsFind', {laBusqueda: laBusqueda, query: req.query.find, milesGenerator: milSeparator})
+      res.render('products/productsViews/productsFind', {laBusqueda: laBusqueda, query: req.query.find, milesGenerator: milSeparator})
     })
     .catch(function (err) {
       res.send(

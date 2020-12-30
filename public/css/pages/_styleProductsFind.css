@@ -76,14 +76,15 @@ section.productosFind div article div.infoProducto p.precioSinDescuento {
   top: -30px;
   left: 18px;
   text-decoration: line-through;
+  font-size: 0.7rem;
 }
 
 section.productosFind div article div.infoProducto b{
   color: var(--green);
   position: absolute;
   top: -10px;
-  width: 100px;
-  font-size: 1.5rem;
+  width: 140px;
+  font-size: 1.15rem;
   height: 25px;
   background-color: #ffffff;
   display: flex;

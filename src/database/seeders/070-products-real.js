@@ -8,13 +8,15 @@ module.exports = {
         name: "Chocolate Biznikke Nevado",
         detail: "Bloque Biznikke Nevado x 120gr.",
         top_check: 1,
-        offer_check: 0,
-        offer_discount: 0,
+        offer_check: 1,
+        offer_discount: 10,
         stock: 20,
-        price: 80,
+        price: 100,
         image: "ChocolateBiznike.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -24,12 +26,14 @@ module.exports = {
         detail: "Chocolate Cadbury Frutilla x27gr, caja x12u.",
         top_check: 0,
         offer_check: 1,
-        offer_discount: 30,
+        offer_discount: 10,
         stock: 20,
-        price: 1000,
+        price: 100,
         image: "Chocolatecadburyyogurtfrutilla.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 2,
+        display_money_id: 2,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -39,12 +43,14 @@ module.exports = {
         detail: "Caja de chupetines Paraguita de chocolate felfort.",
         top_check: 1,
         offer_check: 1,
-        offer_discount: 20,
+        offer_discount: 10,
         stock: 20,
-        price: 1200,
+        price: 88888,
         image: "Paraguitadechocolatefelfort.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 3,
+        display_money_id: 3,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -54,12 +60,14 @@ module.exports = {
         detail: "Confites Rocklets chocolate uni x 150 gs.",
         top_check: 0,
         offer_check: 1,
-        offer_discount: 15,
+        offer_discount: 10,
         stock: 20,
-        price: 500,
+        price: 100,
         image: "confitesroklets.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 3,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -68,13 +76,15 @@ module.exports = {
         name: "Bocadito Tofi",
         detail: "Bocadito Tofi chocolate relleno de dulce de leche uni x 150 gs.",
         top_check: 1,
-        offer_check: 0,
-        offer_discount: 0,
+        offer_check: 1,
+        offer_discount: 10,
         stock: 20,
-        price: 600,
+        price: 100,
         image: "bocaditotofi.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 2,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -86,10 +96,12 @@ module.exports = {
         offer_check: 0,
         offer_discount: 0,
         stock: 20,
-        price: 400,
+        price: 100,
         image: "bocaditocabsha.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 3,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -98,13 +110,15 @@ module.exports = {
         name: "Caja Bon o Bon",
         detail: "Caja bocadito Bon o Bon chocolate leche",
         top_check: 1,
-        offer_check: 0,
-        offer_discount: 0,
+        offer_check: 1,
+        offer_discount: 10,
         stock: 20,
-        price: 600,
+        price: 1,
         image: "bocaditosbonobon.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -113,13 +127,15 @@ module.exports = {
         name: "Chocolate Cofler Blanco con Chocolinas",
         detail: "Chocolate cofler blanco con chocolinas 100gr x 1 uni",
         top_check: 0,
-        offer_check: 0,
-        offer_discount: 0,
+        offer_check: 1,
+        offer_discount: 10,
         stock: 20,
-        price: 400,
+        price: 10,
         image: "chocolatecofleblancoconchoco.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -135,6 +151,8 @@ module.exports = {
         image: "chocolatecofler3placeres.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -150,6 +168,8 @@ module.exports = {
         image: "chocolatecoflerblancoaireado.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -165,6 +185,8 @@ module.exports = {
         image: "chocolatecofleraireadonegro.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -180,6 +202,8 @@ module.exports = {
         image: "chocolatecoflerblock.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -195,6 +219,8 @@ module.exports = {
         image: "milanesa.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -210,6 +236,8 @@ module.exports = {
         image: "ChocolateAguilaSemiAmargo.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -225,6 +253,8 @@ module.exports = {
         image: "chocolatecoflerblancorelleno.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -240,6 +270,8 @@ module.exports = {
         image: "chocolatenegrorelleno.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -255,6 +287,8 @@ module.exports = {
         image: "chocolatearcormani.jpg",
         visit_count: 0,
         category_id: 3,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -271,6 +305,8 @@ module.exports = {
         image: "Alfajorbagleyblancotriple.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -286,6 +322,8 @@ module.exports = {
         image: "Alfajorbonobon.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -301,6 +339,8 @@ module.exports = {
         image: "alfajorbonobonblanco.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -316,6 +356,8 @@ module.exports = {
         image: "alfajoraguila.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -331,6 +373,8 @@ module.exports = {
         image: "alfajortofiglaseado.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -346,6 +390,8 @@ module.exports = {
         image: "alfajortofinegro.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -361,6 +407,8 @@ module.exports = {
         image: "alfajortofinegro3.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -376,6 +424,8 @@ module.exports = {
         image: "alfajortofiblanco3.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -391,6 +441,8 @@ module.exports = {
         image: "alfajorcolferblock.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -406,6 +458,8 @@ module.exports = {
         image: "alfajorbonbon3.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -421,6 +475,8 @@ module.exports = {
         image: "alfajortatinblanco3.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -436,6 +492,8 @@ module.exports = {
         image: "alfajorjorgito.jpg",
         visit_count: 0,
         category_id: 1,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -452,6 +510,8 @@ module.exports = {
         image: "Caramelosdurospicodulce.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -467,6 +527,8 @@ module.exports = {
         image: "Caramelosmasticablessugus.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -482,6 +544,8 @@ module.exports = {
         image: "caramelosconfitados.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -497,6 +561,8 @@ module.exports = {
         image: "caramelosbuttercoco.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -512,6 +578,8 @@ module.exports = {
         image: "caramelosbutterddl.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -527,6 +595,8 @@ module.exports = {
         image: "caramelosbuttermenta.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -542,6 +612,8 @@ module.exports = {
         image: "caramelosbutterbonobon.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -557,6 +629,8 @@ module.exports = {
         image: "caramelosbutterchocolateblanco.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -572,6 +646,8 @@ module.exports = {
         image: "caramelosmenthoplussandia.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -587,6 +663,8 @@ module.exports = {
         image: "caramelosmenthoplus2mentol.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -602,6 +680,8 @@ module.exports = {
         image: "caramelomenthoplusfrutilla.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -617,6 +697,8 @@ module.exports = {
         image: "caramelomenthopluslimon.jpg",
         visit_count: 0,
         category_id: 2,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -633,6 +715,8 @@ module.exports = {
         image: "Gomitasmogulositosextreme.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -648,6 +732,8 @@ module.exports = {
         image: "Gomitasmogultiburoncitos.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -663,6 +749,8 @@ module.exports = {
         image: "gomitasmogulfrutillaacido.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -678,6 +766,8 @@ module.exports = {
         image: "gomitasmoguleucaliptus.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -693,6 +783,8 @@ module.exports = {
         image: "gomitasmogultuttifrutti.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -708,6 +800,8 @@ module.exports = {
         image: "gomitasmoguldinos.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -723,6 +817,8 @@ module.exports = {
         image: "GomitasMogulMonstruitos.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -738,6 +834,8 @@ module.exports = {
         image: "gomitasmogulrodajas.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -753,6 +851,8 @@ module.exports = {
         image: "gomitasmogulfrutales.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -768,6 +868,8 @@ module.exports = {
         image: "gomitasmogulositos.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -783,6 +885,8 @@ module.exports = {
         image: "gomitasmogulfrutillaycrema.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -798,6 +902,8 @@ module.exports = {
         image: "gomitasdientitos.jpg",
         visit_count: 0,
         category_id: 6,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -814,6 +920,8 @@ module.exports = {
         image: "Galletitassaladixsnackpizza.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -829,6 +937,8 @@ module.exports = {
         image: "galletitascerealmix.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -844,6 +954,8 @@ module.exports = {
         image: "galletitasformisddl.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -859,6 +971,8 @@ module.exports = {
         image: "galletitasformischocolate.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -874,6 +988,8 @@ module.exports = {
         image: "galletitasformisfrutilla.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -889,6 +1005,8 @@ module.exports = {
         image: "galletitaschocolinas.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -904,6 +1022,8 @@ module.exports = {
         image: "galletitascofler.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -919,6 +1039,8 @@ module.exports = {
         image: "BiscochitosDonSaturSalados.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -934,6 +1056,8 @@ module.exports = {
         image: "BiscochitosDonSaturDulce.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -949,6 +1073,8 @@ module.exports = {
         image: "galletitas9deoro.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -964,6 +1090,8 @@ module.exports = {
         image: "galletitaspepitos.jpg",
         visit_count: 0,
         category_id: 5,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -980,6 +1108,8 @@ module.exports = {
         image: "chupetinespopfrutal.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -995,6 +1125,8 @@ module.exports = {
         image: "chupetinespoppintalengua.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1010,6 +1142,8 @@ module.exports = {
         image: "chupetinpopevolution.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1025,6 +1159,8 @@ module.exports = {
         image: "Chupetinpoptrompito.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1040,6 +1176,8 @@ module.exports = {
         image: "ChupetinPicoDulce.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1055,6 +1193,8 @@ module.exports = {
         image: "chupetinbabydoll.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1070,6 +1210,8 @@ module.exports = {
         image: "chupetinbolalocamaxcereza.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1085,6 +1227,8 @@ module.exports = {
         image: "chupetinbolalocapoolparty.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1100,6 +1244,8 @@ module.exports = {
         image: "chupetinflynnpafftuttifrutti.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1115,6 +1261,8 @@ module.exports = {
         image: "chupetinmisterpopsevolutionextreme.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1130,6 +1278,8 @@ module.exports = {
         image: "chupetinpitopitofruta.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1145,6 +1295,8 @@ module.exports = {
         image: "chupetinpopsevolutionblueberry.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -1160,6 +1312,8 @@ module.exports = {
         image: "chupetinringpoplol.jpg",
         visit_count: 0,
         category_id: 4,
+        publish_money_id: 1,
+        display_money_id: 1,
         active: 1,
         created_at: new Date(),
         updated_at: new Date()

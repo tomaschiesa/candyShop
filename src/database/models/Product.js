@@ -39,6 +39,12 @@ module.exports = (sequelize, dataTypes) => {
     category_id:{
       type: dataTypes.INTEGER(10),
     },
+    publish_money_id:{
+      type: dataTypes.INTEGER(10),
+    },
+    display_money_id:{
+      type: dataTypes.INTEGER(10),
+    },
     active:{
       type: dataTypes.BOOLEAN(1),
       allowNull: false
@@ -59,6 +65,16 @@ module.exports = (sequelize, dataTypes) => {
       as: 'Category',
       foreignKey: 'category_id'
     });
+
+    Prod.belongsTo(models.MoneyPublish, {
+      as: 'MoneyPublish',
+      foreignKey: 'publish_money_id'
+    });
+    Prod.belongsTo(models.MoneyDisplay, {
+      as: 'MoneyDisplay',
+      foreignKey: 'display_money_id'
+    });
+
     Prod.belongsToMany(models.Usuario, {
       as: 'User',
       through: 'purchases',
